@@ -5,21 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI | Navbar</title>
-    <!-- ------------------- Scripts-------------------- -->
-    <script
-      src="https://kit.fontawesome.com/eead678de6.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="/ProjectUI_Navbar/jquery-3.6.0.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        $(".side_bar_btn").click(function () {
-          $(".side_bar").toggleClass("collaps");
-        });
-      });
-    </script>
 
     <!-- ------------------- CSS files here-------------------- -->
     <link
@@ -29,13 +14,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" type="text/css" href="/ProjectUI_Navbar/style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
   </head>
 
   <body>
@@ -49,7 +31,7 @@
       <div class="logo_group">
         <a href="#"
           ><p class="logo-text">Linked</p>
-          <img src="/ProjectUI_Navbar/img/logo/linkedin_128px.png" />
+          <img src="img/logo/linkedin_128px.png" />
         </a>
       </div>
 
@@ -59,49 +41,37 @@
         <ul>
           <li>
             <a href="">
-              <span class="icon icon-menu"
-                ><img src="/ProjectUI_Navbar/img/icon/my-offers.svg"
-              /></span>
+              <span class="icon icon-menu"><img src="img/icon/my-offers.svg" /></span>
               <span class="text">My Offers</span>
             </a>
           </li>
           <li>
             <a href="">
-              <span class="icon icon-menu"
-                ><img src="/ProjectUI_Navbar/img/icon/user-task.svg"
-              /></span>
+              <span class="icon icon-menu"><img src="img/icon/user-task.svg" /></span>
               <span class="text">User's Task</span>
             </a>
           </li>
           <li>
             <a href="">
-              <span class="icon icon-menu"
-                ><img src="/ProjectUI_Navbar/img/icon/product-discounts.svg"
-              /></span>
+              <span class="icon icon-menu"><img src="img/icon/product-discounts.svg" /></span>
               <span class="text">Product Discounts</span>
             </a>
           </li>
           <li>
             <a href="">
-              <span class="icon icon-menu"
-                ><img src="/ProjectUI_Navbar/img/icon/case-study.svg"
-              /></span>
+              <span class="icon icon-menu"><img src="img/icon/case-study.svg" /></span>
               <span class="text">Case Study</span>
             </a>
           </li>
           <li>
             <a href="">
-              <span class="icon icon-menu"
-                ><img src="/ProjectUI_Navbar/img/icon/security.svg"
-              /></span>
+              <span class="icon icon-menu"><img src="img/icon/security.svg" /></span>
               <span class="text">Security</span>
             </a>
           </li>
           <li>
             <a href="">
-              <span class="icon icon-menu"
-                ><img src="/ProjectUI_Navbar/img/icon/your-ability.svg"
-              /></span>
+              <span class="icon icon-menu"><img src="img/icon/your-ability.svg" /></span>
               <span class="text">Your Ability</span>
             </a>
           </li>
@@ -112,41 +82,33 @@
         <div class="title">
           <h4>Messages</h4>
           <div class="arrow">
-            <img src="/ProjectUI_Navbar/img/Arrows/left-arrow.png" />
-            <img src="/ProjectUI_Navbar/img/Arrows/right-arrow.png" />
+            <img src="img/arrows/left-arrow.png" />
+            <img src="img/arrows/right-arrow.png" />
           </div>
         </div>
         <div class="messages">
           <ul>
             <li>
               <a href="">
-                <span class="user_thumb"
-                  ><img src="/ProjectUI_Navbar/img/user/icons8-user-64.png"
-                /></span>
+                <span class="user_thumb"><img src="img/user/icons8-user-64.png" /></span>
                 <span class="user_name">Max Maraston</span>
               </a>
             </li>
             <li>
               <a href="">
-                <span class="user_thumb"
-                  ><img src="/ProjectUI_Navbar/img/user/icons8-user-64.png"
-                /></span>
+                <span class="user_thumb"><img src="img/user/icons8-user-64.png" /></span>
                 <span class="user_name">Celie W McCombs</span>
               </a>
             </li>
             <li>
               <a href="">
-                <span class="user_thumb"
-                  ><img src="/ProjectUI_Navbar/img/user/icons8-user-64.png"
-                /></span>
+                <span class="user_thumb"><img src="img/user/icons8-user-64.png" /></span>
                 <span class="user_name">Edna J Critchlow</span>
               </a>
             </li>
             <li>
               <a href="">
-                <span class="user_thumb"
-                  ><img src="/ProjectUI_Navbar/img/user/icons8-user-64.png"
-                /></span>
+                <span class="user_thumb"><img src="img/user/icons8-user-64.png" /></span>
                 <span class="user_name">Dima Groshev</span>
               </a>
             </li>
@@ -158,5 +120,23 @@
         </div>
       </div>
     </div>
+
+    <!-- ------------------- Scripts-------------------- -->
+    <script src="https://kit.fontawesome.com/eead678de6.js" crossorigin="anonymous"></script>
+    <!-- <script src="jquery-3.6.0.js"></script> -->
+    <script>
+      // $(document).ready(function () {
+      //   $('.side_bar_btn').click(function () {
+      //     $('.side_bar').toggleClass('collaps');
+      //   });
+      // });
+
+      const sideBarBtn = document.querySelector('.side_bar_btn');
+      const sideBarEl = document.querySelector('.side_bar');
+
+      sideBarBtn.addEventListener('click', (evt) => {
+        sideBarEl.classList.toggle('collapse');
+      });
+    </script>
   </body>
 </html>
